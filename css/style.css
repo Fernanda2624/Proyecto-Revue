@@ -42,6 +42,18 @@ h4, h5, h6, p{
 #logorevue{
     width:200px;
     margin: 25px auto;
+    animation-duration: 1.5s;
+    animation-name: logo;
+    animation-iteration-count:initial;
+}
+
+@keyframes logo{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 /*Menu de inicio navegación*/
@@ -84,12 +96,23 @@ nav{
 
 .menu li a{
     text-decoration: none;
-    color: white;   
+    color: white;  
+    animation-duration: 1.5s;
+    animation-name: titulos;
+    animation-iteration-count:initial;
 }
-
 .menu li a:hover{
     text-decoration:underline;
     color: #a00000;
+}
+
+@keyframes titulos{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .mainindex{
@@ -368,6 +391,7 @@ iframe{
     width:170px; 
     height:170px;
     margin: 20px;
+
 }
 
 /*Diseño pie de página*/
@@ -508,7 +532,7 @@ footer{
         display: grid;
         grid-gap:5px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-rows: auto auto 1fr auto;
         grid-template-areas:
         "header"
         "main"
@@ -589,7 +613,7 @@ footer{
         background-color: white;
     }
     .textocont p{
-        font-size: 1.5em;
+        font-size: 1.0em;
     }
     .imgkaren{
         width:200px; 
