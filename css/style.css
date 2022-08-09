@@ -127,6 +127,17 @@ nav{
     width:fit-content;
     height:fit-content;
     margin: 20px auto;
+    animation-duration: 1.0s;
+    animation-name: imagenes;
+    animation-iteration-count:initial;
+}
+@keyframes imagenes{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .infocentral{
@@ -186,6 +197,17 @@ iframe{
 .imagenhistoria{
     width: 300px;
     border: #d3d0d0 0.5px dashed;
+    animation-duration: 1.0s;
+    animation-name: imagenes;
+    animation-iteration-count:initial;
+}
+@keyframes imagenes{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 
