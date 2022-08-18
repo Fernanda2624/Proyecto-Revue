@@ -241,6 +241,18 @@ iframe{
     align-content: center;
     padding: 10px;
     margin-top: -25px;
+    animation-duration: 1.0s;
+    animation-name: cv;
+    animation-iteration-count:initial;
+}
+
+@keyframes cv{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .navbar-nav-cv li a{
@@ -251,7 +263,13 @@ iframe{
 }
 
 .navbar-nav-cv li a:hover{
-    
+    background: -webkit-linear-gradient(90deg,#FB5458 40%, #ffffff 5%, #FB5458 50%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.navbar-nav-cv li a:visited{
+    text-decoration: underline;
+
 }
 
 .iniciocv{
@@ -261,6 +279,17 @@ iframe{
     margin: auto;
     width: 75%;
     padding: 5px;
+    animation-duration: 0.5s;
+    animation-name: info;
+    animation-iteration-count:initial;
+}
+@keyframes info{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .cv-revue div{
@@ -604,50 +633,44 @@ footer{
         display: grid;
         grid-gap:35px;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
         "header"
+        "div"
         "main"
         "footer";
         align-content: center;
     }
     .iniciocv{
-        grid-area: main;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
         margin: 5px;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
     }
-
-    .izq{
+    .navbar-nav-cv{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .navbar-nav-cv li{
+        padding: 10px;
+    }
+    .navbar-nav-cv li a{
+        font-size: small;
+    }
+    .cv-revue{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .cv-revue .imgizq{
+        width: 45%;
+    }
+    .cv-revue div{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: center;
-        padding: 3%;
-    }
-    .izq div{
-        width: 50%;
-    }
-
-    .imgizq{
-        width: 20%;
-
-    }
-
-    .der{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 3%;
-    }
-    .der div{
-        width: 50%;
-    }
-    .imgder{
-        width: 20%;
-        border: solid 1px #2267ce;
+        align-items: center;
+        width: auto;
+        margin: auto;
     }
 
     /*Sección de pagina anime*/
