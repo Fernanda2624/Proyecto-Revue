@@ -1,523 +1,592 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
 /*Configuración inicial con los fonts family y el fondo de la página*/
-body{
-    background-image: url(../img/background.jpg);
-    background-position: center;
-    background-repeat:repeat-x repeat-y;
-    text-align: center;
-}
+body {
+  background-image: url(../img/background.jpg);
+  background-position: center;
+  background-repeat: repeat-x repeat-y;
+  text-align: center; }
 
-h1{
-    color: #000000;
-    background-color:#ffffff;
-    font-family: 'Asap', sans-serif;
-    font-size:2.0em;
-    margin: 5px;
-    padding: 5px;
-}
-h2{
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: normal;
-    color: black;
-} 
+h1 {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: 'Asap', sans-serif;
+  font-size: 2.0em;
+  margin: 5px;
+  padding: 5px; }
 
-h3{
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: normal;
-    color: black;
-}
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  color: black; }
 
-h4, h5, h6, p{
-    font-family: 'Merriweather', serif;
-    font-weight: lighter;
-    color: black;
-}
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  color: black; }
+
+h4 h5 h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  color: black; }
 
 /*Imágenes de la página web y el logo*/
-#logorevue{
-    width:200px;
-    margin: 25px auto;
-    animation-duration: 1.0s;
-    animation-name: logo;
-    animation-iteration-count:initial;
-}
+#logorevue {
+  width: 200px;
+  margin: 25px auto;
+  animation-duration: 1.0s;
+  animation-name: logo;
+  animation-iteration-count: initial; }
 
-@keyframes logo{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+@keyframes logo {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*Menu de inicio navegación*/
-#contenedorindex{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "iframe iframe"
-    "footer footer";
-}
-.headermenu{
-    grid-area: header;
-    width: auto;
-}
+#contenedorindex {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
 
-.navbar-nav{
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:space-around;
-    font-family: 'Merriweather', serif;
-    width: 90%;
-    background: #f38a8a;
-    background: linear-gradient(0deg, #d4e1fd 0%, #ffffff 50%, #fcc1c1 100%);
-    text-align: center;
-    border-top: #e507307c 1.5px solid;
-    border-bottom: #e507308f 1.8px inset;
-    animation-duration: 1.0s;
-    animation-name: titulos;
-    animation-iteration-count:initial;
-}
+.headermenu {
+  grid-area: header;
+  width: auto; }
 
-.navbar-nav li{
-    padding: 5px;
-}
+.navbar-nav {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family: 'Merriweather', serif;
+  width: 90%;
+  background: #f38a8a;
+  background: linear-gradient(0deg, #d4e1fd 0%, #ffffff 50%, #fcc1c1 100%);
+  text-align: center;
+  border-top: #e507307c 1.5px solid;
+  border-bottom: #e507308f 1.8px inset;
+  animation-duration: 1.0s;
+  animation-name: titulos;
+  animation-iteration-count: initial; }
+  .navbar-nav li {
+    padding: 5px; }
 
-#opciones li a{
-    text-decoration: none;
-    color: #e5072f;
-    font-size:x-large;
-    font-weight: bolder;
-    animation-duration: 1.0s;
-    animation-name: titulos;
-    animation-iteration-count:initial;
-}
-#opciones li a:hover{
-    text-decoration:underline;
-    color: #525151; 
-}
+#opciones li a {
+  text-decoration: none;
+  color: #e5072f;
+  font-size: x-large;
+  font-weight: bolder;
+  animation-duration: 1.0s;
+  animation-name: titulos;
+  animation-iteration-count: initial; }
+  #opciones li a:hover {
+    text-decoration: underline;
+    color: #525151; }
 
-@keyframes titulos{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+@keyframes titulos {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.mainindex{
-    grid-area: main;
-}
+.mainindex {
+  grid-area: main; }
 
 /*---@Diseño página index@---*/
-#revueimg{
-    border: none 5px;
-    border-style:inset;
-    width:85%;
-    height:85%;
-    margin: 20px auto;
-    animation-duration: 1.3s;
-    animation-name: imagenes;
-    animation-iteration-count:initial;
-}
-@keyframes imagenes{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+#revueimg {
+  border: none 5px;
+  border-style: inset;
+  width: 85%;
+  height: 85%;
+  margin: 20px auto;
+  animation-duration: 1.3s;
+  animation-name: imagenes;
+  animation-iteration-count: initial; }
 
-.infocentral{
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+@keyframes imagenes {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.infocentral article{
-    padding:5px;
-    width:90%;
-    margin:auto;
-    background-color: white;
-}
+.infocentral {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .infocentral article {
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    background-color: white; }
 
-iframe{
-    grid-area: iframe;
-}
-#videotrailer{
-    text-align: center;
-    width:450px;
-    height:250px;
-    margin: 20px;
-}
+iframe {
+  grid-area: iframe; }
 
+#videotrailer {
+  text-align: center;
+  width: 450px;
+  height: 250px;
+  margin: 20px; }
 
 /*---@Diseño página para la historia@---*/
-#contenedorhistoria{
-    display: grid;
-    grid-gap:35px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 2fr auto;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
-}
+#contenedorhistoria {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 2fr auto;
+  grid-template-areas: "header header" "main main" "footer footer"; }
 
-.mainhistoria{
-    grid-area: main; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+.mainhistoria {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
 
-.historiarevue{
-    display: flex;
-    flex-direction: column;
-    width:40%;
-    background-color: white;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-}
+.historiarevue {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  background-color: white;
+  letter-spacing: 1px;
+  font-size: 0.9rem; }
 
-.imagenhistoria{
-    width: 300px;
-    border: #d3d0d0 0.5px dashed;
-    animation-duration: 1.0s;
-    animation-name: imagenes;
-    animation-iteration-count:initial;
-}
-@keyframes imagenes{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+.imagenhistoria {
+  width: 300px;
+  border: #d3d0d0 0.5px dashed;
+  animation-duration: 1.0s;
+  animation-name: imagenes;
+  animation-iteration-count: initial; }
 
+@keyframes imagenes {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 /*Diseño página de personajes*/
-#contenedorpersonajes{
-    display: grid;
-    grid-gap:35px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 2px auto auto;
-    grid-template-areas:
-    "header header"
-    "div div"
-    "main main"
-    "footer footer";
-}
+#contenedorpersonajes {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 2px auto auto;
+  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
 
-.cont-personajes{
-    grid-area: div;
-    margin: auto;
-    width: 75%;
-    justify-content: center;
-}
+.cont-personajes {
+  grid-area: div;
+  margin: auto;
+  width: 75%;
+  justify-content: center; }
 
-.navbar-nav-cv{
-    background-color: #d4e1fdef;
-    border: #88a6d3 1px dashed;
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    padding: 10px;
-    margin-top: -25px;
-    animation-duration: 1.0s;
-    animation-name: cv;
-    animation-iteration-count:initial;
-}
-
-@keyframes cv{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-.navbar-nav-cv li a{
+.navbar-nav-cv {
+  background-color: #d4e1fdef;
+  border: #88a6d3 1px dashed;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  padding: 10px;
+  margin-top: -25px;
+  animation-duration: 1.0s;
+  animation-name: cv;
+  animation-iteration-count: initial; }
+  .navbar-nav-cv li a {
     text-decoration: none;
     color: #6866ec;
-    font-size:medium;
-    font-weight: 600;
-}
+    font-size: medium;
+    font-weight: 600; }
+    .navbar-nav-cv li a:hover {
+      background: -webkit-linear-gradient(90deg, #FB5458 40%, #ffffff 5%, #FB5458 50%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; }
+    .navbar-nav-cv li a:visited {
+      text-decoration: underline; }
 
-.navbar-nav-cv li a:hover{
-    background: -webkit-linear-gradient(90deg,#FB5458 40%, #ffffff 5%, #FB5458 50%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-}
-.navbar-nav-cv li a:visited{
-    text-decoration: underline;
+@keyframes cv {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-}
+.iniciocv {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 75%;
+  padding: 5px;
+  animation-duration: 0.5s;
+  animation-name: info;
+  animation-iteration-count: initial; }
 
-.iniciocv{
-    grid-area: main;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 75%;
-    padding: 5px;
-    animation-duration: 0.5s;
-    animation-name: info;
-    animation-iteration-count:initial;
-}
-@keyframes info{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+@keyframes info {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
-.cv-revue div{
-    width: 30%;
-}
-
-.cv-revue h3{
+.cv-revue {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  padding: 15px;
+  align-items: center;
+  justify-content: space-evenly; }
+  .cv-revue div {
+    width: 30%; }
+  .cv-revue h3 {
     padding: 5px;
     margin: 10px;
-    background-color: #ffffff00;
-}
-
-.cv-revue .imgizq{
-    width: 30%;  
-}
-.cv-revue .imgder-cv{
+    background-color: #ffffff00; }
+  .cv-revue .imgizq {
+    width: 30%; }
+  .cv-revue .imgder-cv {
     width: 45%;
     margin: 10px;
-    border: solid 1px #0000009c;    
-}
-
-.cv-revue{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    padding: 15px;
-    align-items: center;
-    justify-content: space-evenly;
-}
+    border: solid 1px #0000009c; }
 
 /*---Colores de fondo para los personajes---*/
-#background-revue-k{
-    background: #FB5458;
-    background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
-    border-radius: 10px;
+#background-revue-k {
+  background: #FB5458;
+  background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
+  border-radius: 10px; }
 
-}
-#background-revue-h{
-    background: #6292E9;
-    background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
-    border-radius: 10px;
-}
-#background-revue-n{
-    background: #FDD162;
-    background: linear-gradient(35deg, #ffffffd8 35%, #FDD162 65%);
-    border-radius: 10px;
-}
-#background-revue-j{
-    background: #95CAED;
-    background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
-    border-radius: 10px;
-}
-#background-revue-c{
-    background: #FE9952;
-    background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
-    border-radius: 10px;
-}
-#background-revue-m{
-    background: #CBC6CC;
-    background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
-    border-radius: 10px;
-}
-#background-revue-t{
-    background: #61BF99;
-    background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
-    border-radius: 10px;
-}
-#background-revue-f{
-    background: #8C67AA;
-    background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
-    border-radius: 10px;
-}
-#background-revue-a{
-    background: #E08696;
-    background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
-    border-radius: 10px;
-}
+#background-revue-h {
+  background: #6292E9;
+  background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-n {
+  background: #FDD162;
+  background: linear-gradient(35deg, #ffffffd8 35%, #FDD162 65%);
+  border-radius: 10px; }
+
+#background-revue-j {
+  background: #95CAED;
+  background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
+  border-radius: 10px; }
+
+#background-revue-c {
+  background: #FE9952;
+  background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-m {
+  background: #CBC6CC;
+  background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-t {
+  background: #61BF99;
+  background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-f {
+  background: #8C67AA;
+  background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
+  border-radius: 10px; }
+
+#background-revue-a {
+  background: #E08696;
+  background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
+  border-radius: 10px; }
 
 /*---@Diseño página de anime@----*/
-#contenedoranime{
-    display: grid;
-    grid-gap:5px;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "section section"
-    "footer footer";
-}
+#contenedoranime {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
 
-.infoemision{
-    grid-area: main;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
+.infoemision {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
 
-.emitidos{
-    grid-area: section;
-    align-content: center;
-    justify-content: center;
-    width: 30%;
-    margin: 10px auto;
-    padding: 20px;
-}
+.emitidos {
+  grid-area: section;
+  align-content: center;
+  justify-content: center;
+  width: 30%;
+  margin: 10px auto;
+  padding: 20px; }
 
-.textoemision{
-    width: 30%;
-    background-color: white;
-    margin: 2px;
-    padding: 2px;
-    letter-spacing: 0.5px;
-}
+.textoemision {
+  width: 30%;
+  background-color: white;
+  margin: 2px;
+  padding: 2px;
+  letter-spacing: 0.5px; }
 
-.imgemision{
-    margin: 2px;
-    padding: 2px;
-}
+.imgemision {
+  margin: 2px;
+  padding: 2px; }
 
-.tablacap{
-    display: flex;
-    width: auto;
-    margin-bottom: 50px;
-}
+.tablacap {
+  display: flex;
+  width: auto;
+  margin-bottom: 50px; }
 
 /*Diseño página sobre el juego*/
-#contenedorjuego{
-    display: grid;
-    grid-gap:10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 0.5fr 1fr auto;
-    grid-template-areas:
-    "header header"
-    "main main"
-    "section section"
-    "footer footer";
-}
+#contenedorjuego {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 0.5fr 1fr auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
 
-.juegohistoria{
-    grid-area: main;
-    width: 70%;
-    padding: 15px;
-    margin: 10px auto;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    letter-spacing: 0.5px;
-}
+.juegohistoria {
+  grid-area: main;
+  width: 70%;
+  padding: 15px;
+  margin: 10px auto;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  letter-spacing: 0.5px; }
 
-.secdescarga{
-    grid-area: section;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content:space-evenly;
-    margin: 2px;
-    padding: 2px;
-}
+.secdescarga {
+  grid-area: section;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  margin: 2px;
+  padding: 2px; }
 
-.juego1{
-    padding: 2px;
-}
-.juego1 iframe{
-    padding: 3px;
-}
-.juego1 .juego2, h3{
-    background-color: white;
-    padding: 3px;
-    margin:auto;
-}
+.juego1 {
+  padding: 2px; }
+  .juego1 iframe {
+    padding: 3px; }
 
-.juego2{
-    padding: 2px;
-    justify-content: center;
-    align-content: center;
-}
-.juego2 a{
+.juego1 .juego2, h3 {
+  background-color: white;
+  padding: 3px;
+  margin: auto; }
+
+.juego2 {
+  padding: 2px;
+  justify-content: center;
+  align-content: center; }
+  .juego2 a {
     padding: 3px;
     margin: 3px;
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
-}
+    align-items: center; }
 
 /*Diseño pagina de contacto*/
-#contenedorcontacto{
-    display: grid;
-    grid-gap:20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-    "header header"
-    "main aside"
-    "footer footer";
-}
+#contenedorcontacto {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
 
-.headermenu{
-    grid-area: header;
-}
+.headermenu {
+  grid-area: header; }
 
-.formulariocont{
+.formulariocont {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.form-contenido {
+  border-style: groove;
+  padding: 25px;
+  background-color: white; }
+
+.formcont {
+  background-color: #c5c5c298;
+  padding: 5px;
+  border-style: groove; }
+
+.form-group {
+  font-size: 0.9em;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Merriweather', serif; }
+
+.textocont {
+  grid-area: aside;
+  width: 45%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white; }
+  .textocont p {
+    font-size: 1.4em; }
+
+.imgkaren {
+  width: 170px;
+  height: 170px;
+  margin: 20px; }
+
+/*Diseño pie de página*/
+footer {
+  background: #959595;
+  background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
+  padding: 5px;
+  width: 90%;
+  margin: auto;
+  grid-area: footer; }
+  footer h6 {
+    padding: 5px;
+    color: #ffffff; }
+
+#secfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 5px; }
+
+/*-----@Media queries para full responsive@-----*/
+@media screen and (max-width: 768px) {
+  /*Sección de la pagina de inicio*/
+  #contenedorindex {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 2fr auto auto;
+    grid-template-areas: "header" "main" "iframe" "footer"; }
+  #logorevue {
+    width: 130px;
+    margin: 25px auto; }
+  #revueimg #videotrailer {
+    border: none 5px;
+    border-style: inset;
+    width: 350px;
+    height: 230px;
+    margin: 5px auto;
+    font-size: 0.8em; }
+  .navbar-nav {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  #opciones li a {
+    font-size: 1.0em; }
+  /*Sección de la pagina de historia*/
+  #contenedorhistoria {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: "header" "main" "main" "footer"; }
+  .mainhistoria {
     grid-area: main;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.form-contenido{
-    border-style: groove;
-    padding: 25px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  .historiarevue {
+    width: 60%;
     background-color: white;
-}
-.formcont{
-    background-color: #c5c5c298;
-    padding: 5px;
-    border-style: groove;
-}
-
-.form-group{
-    font-size: 0.9em;
-    margin: 20px;
+    letter-spacing: 1px;
+    font-size: 0.8rem; }
+  .imagenhistoria {
+    width: 250px;
+    border: #d3d0d0 0.5px dashed; }
+  /*Sección de pagina personajes*/
+  #contenedorpersonajes {
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "div" "main" "footer";
+    align-content: center; }
+  .iniciocv {
+    margin: 5px;
+    margin: auto;
+    justify-content: center;
+    align-items: center; }
+  .navbar-nav-cv {
+    display: flex;
+    flex-wrap: wrap; }
+    .navbar-nav-cv li {
+      padding: 10px; }
+      .navbar-nav-cv li a {
+        font-size: small; }
+  .cv-revue {
+    display: flex;
+    flex-direction: column-reverse; }
+    .cv-revue .imgizq {
+      width: 45%; }
+    .cv-revue div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+      margin: auto; }
+  /*Sección de pagina anime*/
+  #contenedoranime {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "main" "section" "footer"; }
+  .infoemision {
+    grid-area: main;
+    display: flex;
+    margin: auto;
+    flex-direction: column-reverse;
+    align-items: center; }
+  .textoemision {
+    width: 80%; }
+  .emitidos {
+    grid-area: section;
+    justify-content: center;
+    width: 60%;
+    margin: auto; }
+  /*Sección de pagina juego*/
+  #contenedorjuego {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header" "main" "section" "footer"; }
+  .juegohistoria {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: white;
+    letter-spacing: 0.5px; }
+  .secdescarga {
+    grid-area: section;
     display: flex;
     flex-direction: column;
-    font-family: 'Merriweather', serif;
-}
-.textocont{
+    justify-content: center; }
+  .juego1 {
+    margin: auto;
+    width: auto; }
+  /*Seccion de la pagina contacto*/
+  #contenedorcontacto {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-areas: "header" "aside" "main" "footer"; }
+  .formulariocont {
+    grid-area: main;
+    display: flex;
+    flex-direction: row; }
+  .formcont {
+    background-color: white; }
+  .textocont {
     grid-area: aside;
     width: 45%;
     margin: 20px auto;
@@ -525,250 +594,10 @@ iframe{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: white;
-}
-.textocont p{
-    font-size: 1.4em;
-}
-.imgkaren{
-    width:170px; 
-    height:170px;
-    margin: 20px;
-}
-
-/*Diseño pie de página*/
-footer{
-    background: #959595;
-    background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
-    padding: 5px;
-    width: 90%;
-    margin: auto;
-}
-
-#secfooter{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    padding: 5px;
-}
-
-footer h6{
-    padding: 5px;
-    color: #ffffff;
-}
-
-footer{
-    grid-area: footer;
-}
-
-
-/*-----@Media queries para full responsive@-----*/
-@media screen and (max-width: 768px) {
-    /*Sección de la pagina de inicio*/
-    #contenedorindex{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 2fr auto auto;
-        grid-template-areas:
-        "header"
-        "main"
-        "iframe"
-        "footer";
-    }
-    #logorevue{
-        width:130px;
-        margin: 25px auto;
-    }
-    #revueimg, #videotrailer{
-        border: none 5px;
-        border-style:inset;
-        width: 350px;
-        height: 230px;
-        margin: 5px auto;
-        font-size: 0.8em;
-    }
-    .navbar-nav{
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-around;
-    }
-    #opciones li a{
-        font-size: 1.0em;
-    }
-
-    /*Sección de la pagina de historia*/
-    #contenedorhistoria{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
-        grid-template-areas:
-        "header"
-        "main"
-        "main"
-        "footer";
-    }
-    .mainhistoria{
-        grid-area: main; 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-    
-    .historiarevue{
-        width:60%;
-        background-color: white;
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-    }
-    
-    .imagenhistoria{
-        width: 250px;
-        border: #d3d0d0 0.5px dashed;
-    }
-
-    /*Sección de pagina personajes*/
-    #contenedorpersonajes{
-        display: grid;
-        grid-gap:35px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-        "header"
-        "div"
-        "main"
-        "footer";
-        align-content: center;
-    }
-    .iniciocv{
-        margin: 5px;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-    }
-    .navbar-nav-cv{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .navbar-nav-cv li{
-        padding: 10px;
-    }
-    .navbar-nav-cv li a{
-        font-size: small;
-    }
-    .cv-revue{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .cv-revue .imgizq{
-        width: 45%;
-    }
-    .cv-revue div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: auto;
-        margin: auto;
-    }
-
-    /*Sección de pagina anime*/
-    #contenedoranime{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-        "header"
-        "main"
-        "section"
-        "footer";
-    }
-    .infoemision{
-        grid-area: main;
-        display: flex;
-        margin: auto;
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-    .textoemision{
-        width: 80%;
-    }
-    
-    .emitidos{
-        grid-area: section;
-        justify-content: center;
-        width: 60%;
-        margin: auto;
-    }
-    /*Sección de pagina juego*/
-    #contenedorjuego{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas:
-        "header"
-        "main"
-        "section"
-        "footer";
-    }
-    .juegohistoria{
-        grid-area: main;
-        display: flex;
-        justify-content:center;
-        margin: auto;
-        background-color: white;
-        letter-spacing: 0.5px;
-    }
-    .secdescarga{
-        grid-area: section;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }   
-    .juego1{
-        margin:auto;
-        width: auto;
-    }
-
-    /*Seccion de la pagina contacto*/
-    #contenedorcontacto{
-        display: grid;
-        grid-gap:20px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr 1fr auto;
-        grid-template-areas:
-        "header"
-        "aside"
-        "main"
-        "footer";
-    }
-    
-    .formulariocont{
-        grid-area: main;
-        display: flex;
-        flex-direction: row;
-    }
-    .formcont{
-        background-color: white;
-    }
-    .textocont{
-        grid-area: aside;
-        width: 45%;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-    }
-    .textocont p{
-        font-size: 1.0em;
-    }
-    .imgkaren{
-        width:200px; 
-        height:200px;
-        margin:20px auto;
-    }
-    
-}
+    background-color: white; }
+    .textocont p {
+      font-size: 1.0em; }
+  .imgkaren {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto; } }
