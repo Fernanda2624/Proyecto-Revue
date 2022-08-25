@@ -1,0 +1,45 @@
+/*!-Div de la pagina de personajes-!*/
+.cont-personajes{
+    grid-area: div;
+    margin: auto;
+    width: 75%;
+    justify-content: center;
+    .navbar-nav-cv{
+        background-color: #d4e1fdef;
+        border: #88a6d3 1px dashed;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        padding: 10px;
+        margin-top: -25px;
+        animation-duration: 1.0s;
+        animation-name: cv;
+        animation-iteration-count:initial;
+        @keyframes cv{
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        li{
+            a{
+                text-decoration: none;
+                color: #6866ec;
+                font-size:medium;
+                font-weight: 600;
+                &:hover{
+                    background: -webkit-linear-gradient(90deg,#FB5458 40%, #ffffff 5%, #FB5458 50%);
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                }
+                &:visited{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

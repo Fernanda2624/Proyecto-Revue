@@ -1,0 +1,48 @@
+/*!-Seccion capítulos emitidos pagina anime-!*/
+.emitidos{
+    grid-area: section;
+    align-content: center;
+    justify-content: center;
+    width: 30%;
+    margin: 10px auto;
+    padding: 20px;
+    
+    .tablacap{
+        display: flex;
+        width: auto;
+        margin-bottom: 50px;
+    }
+}
+/*!-Seccion de descarga pagina juegos-!*/
+.secdescarga{
+    grid-area: section;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-evenly;
+    margin: 2px;
+    padding: 2px;
+    .juego1 .juego2, h3{
+        background-color: white;
+        padding: 3px;
+        margin:auto;
+    }
+    .juego1{
+        padding: 2px;
+        iframe{
+            padding: 3px;
+        }
+    }
+    .juego2{
+        padding: 2px;
+        justify-content: center;
+        align-content: center;
+        a{
+            padding: 3px;
+            margin: 3px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+    }
+}
