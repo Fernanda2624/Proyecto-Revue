@@ -1,93 +1,55 @@
 @charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-/*Configuración inicial con los fonts family y el fondo de la página*/
+/*!-Body de todas las páginas html-!*/
 body {
   background-image: url(../img/background.jpg);
   background-position: center;
   background-repeat: repeat-x repeat-y;
   text-align: center; }
 
-h1 {
-  color: #000000;
-  background-color: #ffffff;
-  font-family: 'Asap', sans-serif;
-  font-size: 2.0em;
-  margin: 5px;
-  padding: 5px; }
-
-h2 {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: normal;
-  color: black; }
-
-h3 {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: normal;
-  color: black; }
-
-h4 h5 h6 {
-  font-family: 'Merriweather', serif;
-  font-weight: lighter;
-  color: black; }
-
-/*Imágenes de la página web y el logo*/
-#logorevue {
-  width: 200px;
-  margin: 25px auto;
-  animation-duration: 1.0s;
-  animation-name: logo;
-  animation-iteration-count: initial; }
+/*!----Navegación barra principal----!*/
+.headermenu {
+  grid-area: header;
+  width: auto; }
+  .headermenu #logorevue {
+    width: 200px;
+    margin: 25px auto;
+    animation-duration: 1.0s;
+    animation-name: logo;
+    animation-iteration-count: initial; }
 
 @keyframes logo {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
-
-/*Menu de inicio navegación*/
-#contenedorindex {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
-
-.headermenu {
-  grid-area: header;
-  width: auto; }
-
-.navbar-nav {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  font-family: 'Merriweather', serif;
-  width: 90%;
-  background: #f38a8a;
-  background: linear-gradient(0deg, #d4e1fd 0%, #ffffff 50%, #fcc1c1 100%);
-  text-align: center;
-  border-top: #e507307c 1.5px solid;
-  border-bottom: #e507308f 1.8px inset;
-  animation-duration: 1.0s;
-  animation-name: titulos;
-  animation-iteration-count: initial; }
-  .navbar-nav li {
-    padding: 5px; }
-
-#opciones li a {
-  text-decoration: none;
-  color: #e5072f;
-  font-size: x-large;
-  font-weight: bolder;
-  animation-duration: 1.0s;
-  animation-name: titulos;
-  animation-iteration-count: initial; }
-  #opciones li a:hover {
-    text-decoration: underline;
-    color: #525151; }
+  .headermenu nav #opciones li a {
+    text-decoration: none;
+    color: #e5072f;
+    font-size: x-large;
+    font-weight: bolder;
+    animation-duration: 1.0s;
+    animation-name: titulos;
+    animation-iteration-count: initial; }
+    .headermenu nav #opciones li a:hover {
+      text-decoration: underline;
+      color: #525151; }
+  .headermenu nav #opciones .navbar-nav {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    font-family: 'Merriweather', serif;
+    width: 90%;
+    background: #f38a8a;
+    background: linear-gradient(0deg, #d4e1fd 0%, #ffffff 50%, #fcc1c1 100%);
+    text-align: center;
+    border-top: #e507307c 1.5px solid;
+    border-bottom: #e507308f 1.8px inset;
+    animation-duration: 1.0s;
+    animation-name: titulos;
+    animation-iteration-count: initial; }
+    .headermenu nav #opciones .navbar-nav li {
+      padding: 5px; }
 
 @keyframes titulos {
   0% {
@@ -95,127 +57,69 @@ h4 h5 h6 {
   100% {
     opacity: 1; } }
 
+/*!-----Main página de index------!*/
 .mainindex {
   grid-area: main; }
-
-/*---@Diseño página index@---*/
-#revueimg {
-  border: none 5px;
-  border-style: inset;
-  width: 85%;
-  height: 85%;
-  margin: 20px auto;
-  animation-duration: 1.3s;
-  animation-name: imagenes;
-  animation-iteration-count: initial; }
+  .mainindex .infocentral {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .mainindex .infocentral #revueimg {
+      border: none 5px;
+      border-style: inset;
+      width: 85%;
+      height: 85%;
+      margin: 20px auto;
+      animation-duration: 1.3s;
+      animation-name: imagenes;
+      animation-iteration-count: initial; }
 
 @keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+    .mainindex .infocentral article {
+      padding: 5px;
+      width: 90%;
+      margin: auto;
+      background-color: white; }
+  .mainindex #videotrailer {
+    grid-area: iframe;
+    text-align: center;
+    width: 450px;
+    height: 250px;
+    margin: 20px; }
 
-.infocentral {
-  margin: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  .infocentral article {
-    padding: 5px;
-    width: 90%;
-    margin: auto;
-    background-color: white; }
-
-iframe {
-  grid-area: iframe; }
-
-#videotrailer {
-  text-align: center;
-  width: 450px;
-  height: 250px;
-  margin: 20px; }
-
-/*---@Diseño página para la historia@---*/
-#contenedorhistoria {
-  display: grid;
-  grid-gap: 35px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 2fr auto;
-  grid-template-areas: "header header" "main main" "footer footer"; }
-
+/*!-----Main página de historia-----!*/
 .mainhistoria {
   grid-area: main;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center; }
-
-.historiarevue {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  background-color: white;
-  letter-spacing: 1px;
-  font-size: 0.9rem; }
-
-.imagenhistoria {
-  width: 300px;
-  border: #d3d0d0 0.5px dashed;
-  animation-duration: 1.0s;
-  animation-name: imagenes;
-  animation-iteration-count: initial; }
+  .mainhistoria .imagenhistoria {
+    width: 300px;
+    border: #d3d0d0 0.5px dashed;
+    animation-duration: 1.0s;
+    animation-name: imagenes;
+    animation-iteration-count: initial; }
 
 @keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+  .mainhistoria .historiarevue {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: white;
+    letter-spacing: 1px;
+    font-size: 0.9rem; }
 
-/*Diseño página de personajes*/
-#contenedorpersonajes {
-  display: grid;
-  grid-gap: 35px;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto 2px auto auto;
-  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
-
-.cont-personajes {
-  grid-area: div;
-  margin: auto;
-  width: 75%;
-  justify-content: center; }
-
-.navbar-nav-cv {
-  background-color: #d4e1fdef;
-  border: #88a6d3 1px dashed;
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
-  padding: 10px;
-  margin-top: -25px;
-  animation-duration: 1.0s;
-  animation-name: cv;
-  animation-iteration-count: initial; }
-  .navbar-nav-cv li a {
-    text-decoration: none;
-    color: #6866ec;
-    font-size: medium;
-    font-weight: 600; }
-    .navbar-nav-cv li a:hover {
-      background: -webkit-linear-gradient(90deg, #FB5458 40%, #ffffff 5%, #FB5458 50%);
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text; }
-    .navbar-nav-cv li a:visited {
-      text-decoration: underline; }
-
-@keyframes cv {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
+/*!-----Main pagina de personajes-----!*/
 .iniciocv {
   grid-area: main;
   display: flex;
@@ -232,120 +136,44 @@ iframe {
     opacity: 0; }
   100% {
     opacity: 1; } }
+  .iniciocv .cv-revue {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-evenly; }
+    .iniciocv .cv-revue div {
+      width: 30%; }
+    .iniciocv .cv-revue h3 {
+      padding: 5px;
+      margin: 10px;
+      background-color: #ffffff00; }
+    .iniciocv .cv-revue .imgizq {
+      width: 30%; }
+    .iniciocv .cv-revue .imgder-cv {
+      width: 45%;
+      margin: 10px;
+      border: solid 1px #0000009c; }
 
-.cv-revue {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  padding: 15px;
-  align-items: center;
-  justify-content: space-evenly; }
-  .cv-revue div {
-    width: 30%; }
-  .cv-revue h3 {
-    padding: 5px;
-    margin: 10px;
-    background-color: #ffffff00; }
-  .cv-revue .imgizq {
-    width: 30%; }
-  .cv-revue .imgder-cv {
-    width: 45%;
-    margin: 10px;
-    border: solid 1px #0000009c; }
-
-/*---Colores de fondo para los personajes---*/
-#background-revue-k {
-  background: #FB5458;
-  background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-h {
-  background: #6292E9;
-  background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-n {
-  background: #FDD162;
-  background: linear-gradient(35deg, #ffffffd8 35%, #FDD162 65%);
-  border-radius: 10px; }
-
-#background-revue-j {
-  background: #95CAED;
-  background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
-  border-radius: 10px; }
-
-#background-revue-c {
-  background: #FE9952;
-  background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-m {
-  background: #CBC6CC;
-  background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-t {
-  background: #61BF99;
-  background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-f {
-  background: #8C67AA;
-  background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
-  border-radius: 10px; }
-
-#background-revue-a {
-  background: #E08696;
-  background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
-  border-radius: 10px; }
-
-/*---@Diseño página de anime@----*/
-#contenedoranime {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
-
+/*!-----Main página de anime-----!*/
 .infoemision {
   grid-area: main;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center; }
+  .infoemision .textoemision {
+    width: 30%;
+    background-color: white;
+    margin: 2px;
+    padding: 2px;
+    letter-spacing: 0.5px; }
+  .infoemision .imgemision {
+    margin: 2px;
+    padding: 2px; }
 
-.emitidos {
-  grid-area: section;
-  align-content: center;
-  justify-content: center;
-  width: 30%;
-  margin: 10px auto;
-  padding: 20px; }
-
-.textoemision {
-  width: 30%;
-  background-color: white;
-  margin: 2px;
-  padding: 2px;
-  letter-spacing: 0.5px; }
-
-.imgemision {
-  margin: 2px;
-  padding: 2px; }
-
-.tablacap {
-  display: flex;
-  width: auto;
-  margin-bottom: 50px; }
-
-/*Diseño página sobre el juego*/
-#contenedorjuego {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 0.5fr 1fr auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
-
+/*!-----Main pagina de juego-----!*/
 .juegohistoria {
   grid-area: main;
   width: 70%;
@@ -357,6 +185,78 @@ iframe {
   background-color: white;
   letter-spacing: 0.5px; }
 
+/*!----Main pagina de contacto-----!*/
+.formulariocont {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .formulariocont .form-contenido {
+    border-style: groove;
+    padding: 25px;
+    background-color: white; }
+    .formulariocont .form-contenido .formcont {
+      background-color: #c5c5c298;
+      padding: 5px;
+      border-style: groove; }
+    .formulariocont .form-contenido .form-group {
+      font-size: 0.9em;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Merriweather', serif; }
+
+/*!-Div de la pagina de personajes-!*/
+.cont-personajes {
+  grid-area: div;
+  margin: auto;
+  width: 75%;
+  justify-content: center; }
+  .cont-personajes .navbar-nav-cv {
+    background-color: #d4e1fdef;
+    border: #88a6d3 1px dashed;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding: 10px;
+    margin-top: -25px;
+    animation-duration: 1.0s;
+    animation-name: cv;
+    animation-iteration-count: initial; }
+
+@keyframes cv {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+    .cont-personajes .navbar-nav-cv li a {
+      text-decoration: none;
+      color: #6866ec;
+      font-size: medium;
+      font-weight: 600; }
+      .cont-personajes .navbar-nav-cv li a:hover {
+        background: -webkit-linear-gradient(90deg, #FB5458 40%, #ffffff 5%, #FB5458 50%);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text; }
+      .cont-personajes .navbar-nav-cv li a:visited {
+        text-decoration: underline; }
+
+/*!-Seccion capítulos emitidos pagina anime-!*/
+.emitidos {
+  grid-area: section;
+  align-content: center;
+  justify-content: center;
+  width: 30%;
+  margin: 10px auto;
+  padding: 20px; }
+  .emitidos .tablacap {
+    display: flex;
+    width: auto;
+    margin-bottom: 50px; }
+
+/*!-Seccion de descarga pagina juegos-!*/
 .secdescarga {
   grid-area: section;
   display: flex;
@@ -364,63 +264,27 @@ iframe {
   justify-content: space-evenly;
   margin: 2px;
   padding: 2px; }
-
-.juego1 {
-  padding: 2px; }
-  .juego1 iframe {
-    padding: 3px; }
-
-.juego1 .juego2, h3 {
-  background-color: white;
-  padding: 3px;
-  margin: auto; }
-
-.juego2 {
-  padding: 2px;
-  justify-content: center;
-  align-content: center; }
-  .juego2 a {
+  .secdescarga .juego1 .juego2, .secdescarga h3 {
+    background-color: white;
     padding: 3px;
-    margin: 3px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center; }
+    margin: auto; }
+  .secdescarga .juego1 {
+    padding: 2px; }
+    .secdescarga .juego1 iframe {
+      padding: 3px; }
+  .secdescarga .juego2 {
+    padding: 2px;
+    justify-content: center;
+    align-content: center; }
+    .secdescarga .juego2 a {
+      padding: 3px;
+      margin: 3px;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      align-items: center; }
 
-/*Diseño pagina de contacto*/
-#contenedorcontacto {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header" "main aside" "footer footer"; }
-
-.headermenu {
-  grid-area: header; }
-
-.formulariocont {
-  grid-area: main;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; }
-
-.form-contenido {
-  border-style: groove;
-  padding: 25px;
-  background-color: white; }
-
-.formcont {
-  background-color: #c5c5c298;
-  padding: 5px;
-  border-style: groove; }
-
-.form-group {
-  font-size: 0.9em;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Merriweather', serif; }
-
+/*!-----Aside de la pagina de contacto-----!*/
 .textocont {
   grid-area: aside;
   width: 45%;
@@ -432,31 +296,10 @@ iframe {
   background-color: white; }
   .textocont p {
     font-size: 1.4em; }
-
-.imgkaren {
-  width: 170px;
-  height: 170px;
-  margin: 20px; }
-
-/*Diseño pie de página*/
-footer {
-  background: #959595;
-  background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
-  padding: 5px;
-  width: 90%;
-  margin: auto;
-  grid-area: footer; }
-  footer h6 {
-    padding: 5px;
-    color: #ffffff; }
-
-#secfooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  padding: 5px; }
+  .textocont .imgkaren {
+    width: 170px;
+    height: 170px;
+    margin: 20px; }
 
 /*-----@Media queries para full responsive@-----*/
 @media screen and (max-width: 768px) {
@@ -601,3 +444,144 @@ footer {
     width: 200px;
     height: 200px;
     margin: 20px auto; } }
+
+/*@----Diseño pie de página----@*/
+footer {
+  background: #959595;
+  background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
+  padding: 5px;
+  width: 90%;
+  margin: auto;
+  grid-area: footer; }
+  footer #secfooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 5px; }
+  footer h6 {
+    padding: 5px;
+    color: #ffffff; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Configuración inicial con los fonts family y el fondo de la página*/
+h1 {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: 'Asap', sans-serif;
+  font-size: 2.0em;
+  margin: 5px;
+  padding: 5px; }
+
+h2 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  color: black; }
+
+h3 {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: normal;
+  color: black; }
+
+h4 h5 h6 {
+  font-family: 'Merriweather', serif;
+  font-weight: lighter;
+  color: black; }
+
+/*@------Estilo navegación página index------@*/
+#contenedorindex {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
+
+/*------@Diseño página para la historia@------*/
+#contenedorhistoria {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 2fr auto;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+
+/*-----@Diseño página de personajes@------*/
+#contenedorpersonajes {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 2px auto auto;
+  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
+
+/*-----@Diseño página de anime@------*/
+#contenedoranime {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+
+/*-----@Diseño página sobre el juego@------*/
+#contenedorjuego {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 0.5fr 1fr auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+
+/*-----@Diseño pagina de contacto@------*/
+#contenedorcontacto {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
+
+/*---Colores de fondo para los personajes---*/
+#background-revue-k {
+  background: #FB5458;
+  background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-h {
+  background: #6292E9;
+  background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-n {
+  background: #FDD162;
+  background: linear-gradient(35deg, #ffffffd8 35%, #FDD162 65%);
+  border-radius: 10px; }
+
+#background-revue-j {
+  background: #95CAED;
+  background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
+  border-radius: 10px; }
+
+#background-revue-c {
+  background: #FE9952;
+  background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-m {
+  background: #CBC6CC;
+  background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-t {
+  background: #61BF99;
+  background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-f {
+  background: #8C67AA;
+  background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
+  border-radius: 10px; }
+
+#background-revue-a {
+  background: #E08696;
+  background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
+  border-radius: 10px; }
