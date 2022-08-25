@@ -48,12 +48,15 @@ h4 h5 h6 {
   100% {
     opacity: 1; } }
 
-/*Menu de inicio navegación*/
+/*@------Estilo navegación página index------@*/
 #contenedorindex {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
+  grid-template-areas: "header header"
+ "main main"
+ "iframe iframe"
+ "footer footer"; }
 
 .headermenu {
   grid-area: header;
@@ -141,7 +144,9 @@ iframe {
   grid-gap: 35px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 2fr auto;
-  grid-template-areas: "header header" "main main" "footer footer"; }
+  grid-template-areas: "header header"
+ "main main"
+ "footer footer"; }
 
 .mainhistoria {
   grid-area: main;
@@ -177,7 +182,10 @@ iframe {
   grid-gap: 35px;
   grid-template-columns: auto auto;
   grid-template-rows: auto 2px auto auto;
-  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
+  grid-template-areas: "header header"
+ "div div"
+ "main main"
+ "footer footer"; }
 
 .cont-personajes {
   grid-area: div;
@@ -305,7 +313,10 @@ iframe {
   grid-gap: 5px;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+  grid-template-areas: "header header"
+ "main main"
+ "section section"
+ "footer footer"; }
 
 .infoemision {
   grid-area: main;
@@ -344,7 +355,10 @@ iframe {
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 0.5fr 1fr auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+  grid-template-areas: "header header"
+ "main main"
+ "section section"
+ "footer footer"; }
 
 .juegohistoria {
   grid-area: main;
@@ -393,7 +407,9 @@ iframe {
   grid-gap: 20px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header" "main aside" "footer footer"; }
+  grid-template-areas: "header header"
+ "main aside"
+ "footer footer"; }
 
 .headermenu {
   grid-area: header; }
@@ -464,7 +480,10 @@ footer {
   #contenedorindex {
     grid-template-columns: 1fr;
     grid-template-rows: auto 2fr auto auto;
-    grid-template-areas: "header" "main" "iframe" "footer"; }
+    grid-template-areas: "header"
+ "main"
+ "iframe"
+ "footer"; }
   #logorevue {
     width: 130px;
     margin: 25px auto; }
@@ -486,7 +505,10 @@ footer {
   #contenedorhistoria {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr 1fr auto;
-    grid-template-areas: "header" "main" "main" "footer"; }
+    grid-template-areas: "header"
+ "main"
+ "main"
+ "footer"; }
   .mainhistoria {
     grid-area: main;
     display: flex;
@@ -507,7 +529,10 @@ footer {
     grid-gap: 35px;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "header" "div" "main" "footer";
+    grid-template-areas: "header"
+ "div"
+ "main"
+ "footer";
     align-content: center; }
   .iniciocv {
     margin: 5px;
@@ -538,7 +563,10 @@ footer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "header" "main" "section" "footer"; }
+    grid-template-areas: "header"
+ "main"
+ "section"
+ "footer"; }
   .infoemision {
     grid-area: main;
     display: flex;
@@ -557,7 +585,10 @@ footer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    grid-template-areas: "header" "main" "section" "footer"; }
+    grid-template-areas: "header"
+ "main"
+ "section"
+ "footer"; }
   .juegohistoria {
     grid-area: main;
     display: flex;
@@ -579,7 +610,10 @@ footer {
     grid-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr 1fr auto;
-    grid-template-areas: "header" "aside" "main" "footer"; }
+    grid-template-areas: "header"
+ "aside"
+ "main"
+ "footer"; }
   .formulariocont {
     grid-area: main;
     display: flex;
