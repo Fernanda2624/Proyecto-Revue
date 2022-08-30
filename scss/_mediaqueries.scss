@@ -49,7 +49,6 @@
         "footer";
     }
     .mainhistoria{
-        grid-area: main; 
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -72,17 +71,22 @@
     #contenedorpersonajes{
         display: grid;
         grid-gap:35px;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto 2px auto auto;
         grid-template-areas:
         "header"
+        "div"
         "div"
         "main"
         "footer";
         align-content: center;
     }
+    .cont-personajes .iniciocv{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
     .iniciocv{
-        margin: 5px;
         margin: auto;
         justify-content: center;
         align-items: center;
@@ -92,15 +96,16 @@
         flex-wrap: wrap;
         li{
             padding: 10px;
+            margin: 5px auto;
             a{
-                font-size:small ;
+                font-size:small;
             }
         }
 
     }
     .cv-revue{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction:row;
         .imgizq{
             width: 45%;
         }
@@ -126,7 +131,6 @@
         "footer";
     }
     .infoemision{
-        grid-area: main;
         display: flex;
         margin: auto;
         flex-direction: column-reverse;
@@ -175,40 +179,35 @@
     /*Seccion de la pagina contacto*/
     #contenedorcontacto{
         display: grid;
-        grid-gap:20px;
-        grid-template-columns: 1fr;
+        grid-gap:5px;
+        grid-template-columns: auto;
         grid-template-rows: auto 1fr 1fr auto;
         grid-template-areas:
         "header"
         "aside"
         "main"
         "footer";
-    }
-    
-    .formulariocont{
-        grid-area: main;
-        display: flex;
-        flex-direction: row;
-    }
-    .formcont{
-        background-color: white;
-    }
-    .textocont{
-        grid-area: aside;
-        width: 45%;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        p{
-            font-size: 1.0em;
+        .formulariocont{ 
+            display: flex;
+            flex-direction: row-reverse;
         }
-    }
-    .imgkaren{
-        width:200px; 
-        height:200px;
-        margin:20px auto;
-    }
+        .formcont{
+            background-color: white;
+        }
+        .textocont{
+            width: 45%;
+            margin: 20px auto;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            p{
+                font-size: 1.0em;
+            }
+        }
+        .imgkaren{
+            width:100px; 
+            height:100px;
+            margin:20px auto;
+        }
+    }   
 }

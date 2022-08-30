@@ -143,18 +143,22 @@ body {
     padding: 15px;
     align-items: center;
     justify-content: space-evenly; }
-    .iniciocv .cv-revue div {
-      width: 30%; }
-    .iniciocv .cv-revue h3 {
-      padding: 5px;
-      margin: 10px;
-      background-color: #ffffff00; }
     .iniciocv .cv-revue .imgizq {
-      width: 30%; }
-    .iniciocv .cv-revue .imgder-cv {
-      width: 45%;
-      margin: 10px;
-      border: solid 1px #0000009c; }
+      width: 25%; }
+    .iniciocv .cv-revue div {
+      width: 35%; }
+      .iniciocv .cv-revue div .imgder-cv {
+        width: 45%;
+        margin: 10px;
+        border: solid 1px #0000009c; }
+      .iniciocv .cv-revue div h1 {
+        padding: 5px;
+        margin: 5px;
+        background-color: #ffffff00;
+        color: #353535;
+        font-size: xx-large; }
+      .iniciocv .cv-revue div p {
+        font-size: 0.9rem; }
 
 /*!-----Main página de anime-----!*/
 .infoemision {
@@ -331,7 +335,6 @@ body {
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas: "header" "main" "main" "footer"; }
   .mainhistoria {
-    grid-area: main;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -348,12 +351,15 @@ body {
   #contenedorpersonajes {
     display: grid;
     grid-gap: 35px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "header" "div" "main" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto 2px auto auto;
+    grid-template-areas: "header" "div" "div" "main" "footer";
     align-content: center; }
+  .cont-personajes .iniciocv {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; }
   .iniciocv {
-    margin: 5px;
     margin: auto;
     justify-content: center;
     align-items: center; }
@@ -361,12 +367,13 @@ body {
     display: flex;
     flex-wrap: wrap; }
     .navbar-nav-cv li {
-      padding: 10px; }
+      padding: 10px;
+      margin: 5px auto; }
       .navbar-nav-cv li a {
         font-size: small; }
   .cv-revue {
     display: flex;
-    flex-direction: column-reverse; }
+    flex-direction: row; }
     .cv-revue .imgizq {
       width: 45%; }
     .cv-revue div {
@@ -383,7 +390,6 @@ body {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "main" "section" "footer"; }
   .infoemision {
-    grid-area: main;
     display: flex;
     margin: auto;
     flex-direction: column-reverse;
@@ -419,31 +425,27 @@ body {
   /*Seccion de la pagina contacto*/
   #contenedorcontacto {
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    grid-template-columns: auto;
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas: "header" "aside" "main" "footer"; }
-  .formulariocont {
-    grid-area: main;
-    display: flex;
-    flex-direction: row; }
-  .formcont {
-    background-color: white; }
-  .textocont {
-    grid-area: aside;
-    width: 45%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white; }
-    .textocont p {
-      font-size: 1.0em; }
-  .imgkaren {
-    width: 200px;
-    height: 200px;
-    margin: 20px auto; } }
+    #contenedorcontacto .formulariocont {
+      display: flex;
+      flex-direction: row-reverse; }
+    #contenedorcontacto .formcont {
+      background-color: white; }
+    #contenedorcontacto .textocont {
+      width: 45%;
+      margin: 20px auto;
+      align-items: center;
+      justify-content: center;
+      background-color: white; }
+      #contenedorcontacto .textocont p {
+        font-size: 1.0em; }
+    #contenedorcontacto .imgkaren {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto; } }
 
 /*@----Diseño pie de página----@*/
 footer {
@@ -462,7 +464,8 @@ footer {
     padding: 5px; }
   footer h6 {
     padding: 5px;
-    color: #ffffff; }
+    color: #ffffff;
+    font-size: small; }
 
 * {
   margin: 0;
