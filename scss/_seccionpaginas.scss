@@ -1,14 +1,17 @@
+@import "mixin";
 /*!-Seccion capítulos emitidos pagina anime-!*/
-.emitidos{
+#emitidos{
     grid-area: section;
+    @include posicion(flex, column, center);
     align-content: center;
-    justify-content: center;
-    width: 30%;
-    margin: 10px auto;
-    padding: 20px;
-    
-    .tablacap{
-        display: flex;
+    width: 60%;
+    margin: 5px auto;
+    padding: 10px;  
+    h2{
+        font-size:x-large;
+        margin: 5px auto;
+    } 
+    #tablacap{
         width: auto;
         margin-bottom: 50px;
     }
@@ -16,18 +19,14 @@
 /*!-Seccion de descarga pagina juegos-!*/
 .secdescarga{
     grid-area: section;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content:space-evenly;
+    @include posicion(flex, row-reverse, space-evenly);
     margin: 2px;
     padding: 2px;
-    .juego1 .juego2, h3{
-        background-color: white;
-        padding: 3px;
-        margin:auto;
-    }
     .juego1{
         padding: 2px;
+        h1{
+            font-size: xx-large;
+        }
         iframe{
             padding: 3px;
         }
@@ -36,11 +35,13 @@
         padding: 2px;
         justify-content: center;
         align-content: center;
+        h1{
+            font-size: xx-large;
+        }
         a{
             padding: 3px;
             margin: 3px;
-            display: flex;
-            flex-direction: column;
+            @include posicion (flex, column, space-between);
             align-content: center;
             align-items: center;
         }

@@ -1,0 +1,29 @@
+@import "mixin";
+/*---Colores de fondo para los personajes; páginas personajes---*/
+#background-revue-k{
+    @include colores1(#FB5458);
+}
+#background-revue-h{
+    @include colores1(#6292E9);
+}
+#background-revue-n{
+    @include colores2(#FDD162);
+}
+#background-revue-j{
+    @include colores2(#95CAED);
+}
+#background-revue-c{
+    @include colores1(#FE9952);
+}
+#background-revue-m{
+    @include colores1(#CBC6CC);
+}
+#background-revue-t{
+    @include colores1(#61BF99);
+}
+#background-revue-f{
+    @include colores2(#8C67AA);
+}
+#background-revue-a{
+    @include colores2(#E08696);
+}

@@ -6,6 +6,7 @@ body {
   background-repeat: repeat-x repeat-y;
   text-align: center; }
 
+/*--$Mixin de animación$--*/
 /*!----Navegación barra principal----!*/
 .headermenu {
   grid-area: header;
@@ -13,11 +14,11 @@ body {
   .headermenu #logorevue {
     width: 200px;
     margin: 25px auto;
-    animation-duration: 1.0s;
-    animation-name: logo;
+    animation-duration: 1s;
+    animation-name: imagenes;
     animation-iteration-count: initial; }
 
-@keyframes logo {
+@keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
@@ -25,11 +26,17 @@ body {
   .headermenu nav #opciones li a {
     text-decoration: none;
     color: #e5072f;
-    font-size: x-large;
+    font-size: larger;
     font-weight: bolder;
-    animation-duration: 1.0s;
-    animation-name: titulos;
+    animation-duration: 1s;
+    animation-name: imagenes;
     animation-iteration-count: initial; }
+
+@keyframes imagenes {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
     .headermenu nav #opciones li a:hover {
       text-decoration: underline;
       color: #525151; }
@@ -45,19 +52,20 @@ body {
     text-align: center;
     border-top: #e507307c 1.5px solid;
     border-bottom: #e507308f 1.8px inset;
-    animation-duration: 1.0s;
-    animation-name: titulos;
+    animation-duration: 1s;
+    animation-name: imagenes;
     animation-iteration-count: initial; }
-    .headermenu nav #opciones .navbar-nav li {
-      padding: 5px; }
 
-@keyframes titulos {
+@keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+    .headermenu nav #opciones .navbar-nav li {
+      padding: 5px; }
 
-/*!-----Main página de index------!*/
+/*--$Mixin de animación$--*/
+/*!------Main página de index------!*/
 .mainindex {
   grid-area: main; }
   .mainindex .infocentral {
@@ -102,7 +110,7 @@ body {
   .mainhistoria .imagenhistoria {
     width: 300px;
     border: #d3d0d0 0.5px dashed;
-    animation-duration: 1.0s;
+    animation-duration: 1s;
     animation-name: imagenes;
     animation-iteration-count: initial; }
 
@@ -115,23 +123,22 @@ body {
     display: flex;
     flex-direction: column;
     width: 40%;
-    background-color: white;
-    letter-spacing: 1px;
-    font-size: 0.9rem; }
+    background-color: white; }
 
 /*!-----Main pagina de personajes-----!*/
 .iniciocv {
   grid-area: main;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin: auto;
   width: 75%;
   padding: 5px;
   animation-duration: 0.5s;
-  animation-name: info;
+  animation-name: imagenes;
   animation-iteration-count: initial; }
 
-@keyframes info {
+@keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
@@ -139,12 +146,11 @@ body {
   .iniciocv .cv-revue {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-content: center;
     padding: 15px;
     align-items: center;
     justify-content: space-evenly; }
-    .iniciocv .cv-revue .imgizq {
-      width: 25%; }
     .iniciocv .cv-revue div {
       width: 35%; }
       .iniciocv .cv-revue div .imgder-cv {
@@ -152,10 +158,7 @@ body {
         margin: 10px;
         border: solid 1px #0000009c; }
       .iniciocv .cv-revue div h1 {
-        padding: 5px;
-        margin: 5px;
         background-color: #ffffff00;
-        color: #353535;
         font-size: xx-large; }
       .iniciocv .cv-revue div p {
         font-size: 0.9rem; }
@@ -183,11 +186,9 @@ body {
   width: 70%;
   padding: 15px;
   margin: 10px auto;
-  margin: auto;
-  display: flex;
   justify-content: center;
   background-color: white;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.3px; }
 
 /*!----Main pagina de contacto-----!*/
 .formulariocont {
@@ -210,27 +211,28 @@ body {
       flex-direction: column;
       font-family: 'Merriweather', serif; }
 
-/*!-Div de la pagina de personajes-!*/
+/*--$Mixin de animación$--*/
+/*!----Div de la pagina de personajes----!*/
 .cont-personajes {
   grid-area: div;
   margin: auto;
   width: 75%;
   justify-content: center; }
   .cont-personajes .navbar-nav-cv {
-    background-color: #d4e1fdef;
-    border: #88a6d3 1px dashed;
-    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    animation-duration: 1s;
+    animation-name: imagenes;
+    animation-iteration-count: initial;
+    background-color: #d4e1fdef;
+    border: #88a6d3 1px dashed;
+    list-style: none;
     align-content: center;
     padding: 10px;
-    margin-top: -25px;
-    animation-duration: 1.0s;
-    animation-name: cv;
-    animation-iteration-count: initial; }
+    margin-top: -25px; }
 
-@keyframes cv {
+@keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
@@ -238,25 +240,28 @@ body {
     .cont-personajes .navbar-nav-cv li a {
       text-decoration: none;
       color: #6866ec;
-      font-size: medium;
+      font-size: smaller;
       font-weight: 600; }
       .cont-personajes .navbar-nav-cv li a:hover {
         background: -webkit-linear-gradient(90deg, #FB5458 40%, #ffffff 5%, #FB5458 50%);
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text; }
-      .cont-personajes .navbar-nav-cv li a:visited {
-        text-decoration: underline; }
 
+/*--$Mixin de animación$--*/
 /*!-Seccion capítulos emitidos pagina anime-!*/
-.emitidos {
+#emitidos {
   grid-area: section;
-  align-content: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 30%;
-  margin: 10px auto;
-  padding: 20px; }
-  .emitidos .tablacap {
-    display: flex;
+  align-content: center;
+  width: 60%;
+  margin: 5px auto;
+  padding: 10px; }
+  #emitidos h2 {
+    font-size: x-large;
+    margin: 5px auto; }
+  #emitidos #tablacap {
     width: auto;
     margin-bottom: 50px; }
 
@@ -268,25 +273,73 @@ body {
   justify-content: space-evenly;
   margin: 2px;
   padding: 2px; }
-  .secdescarga .juego1 .juego2, .secdescarga h3 {
-    background-color: white;
-    padding: 3px;
-    margin: auto; }
   .secdescarga .juego1 {
     padding: 2px; }
+    .secdescarga .juego1 h1 {
+      font-size: xx-large; }
     .secdescarga .juego1 iframe {
       padding: 3px; }
   .secdescarga .juego2 {
     padding: 2px;
     justify-content: center;
     align-content: center; }
+    .secdescarga .juego2 h1 {
+      font-size: xx-large; }
     .secdescarga .juego2 a {
       padding: 3px;
       margin: 3px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-content: center;
       align-items: center; }
+
+/*@------Estilo navegación página index------@*/
+#contenedorindex {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
+
+/*------@Diseño página para la historia@------*/
+#contenedorhistoria {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 2fr auto;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+
+/*-----@Diseño página de personajes@------*/
+#contenedorpersonajes {
+  display: grid;
+  grid-gap: 35px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto 2px auto auto;
+  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
+
+/*-----@Diseño página de anime@------*/
+#contenedoranime {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+
+/*-----@Diseño página sobre el juego@------*/
+#contenedorjuego {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 0.5fr 1fr auto;
+  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
+
+/*-----@Diseño pagina de contacto@------*/
+#contenedorcontacto {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
 
 /*!-----Aside de la pagina de contacto-----!*/
 .textocont {
@@ -298,21 +351,67 @@ body {
   align-items: center;
   justify-content: center;
   background-color: white; }
-  .textocont p {
-    font-size: 1.4em; }
   .textocont .imgkaren {
     width: 170px;
     height: 170px;
     margin: 20px; }
+
+/*--$Mixin de animación$--*/
+/*---Colores de fondo para los personajes; páginas personajes---*/
+#background-revue-k {
+  background: #FB5458;
+  background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-h {
+  background: #6292E9;
+  background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-n {
+  background: #FDD162;
+  background: linear-gradient(47deg, #ffffffd8 35%, #FDD162 65%);
+  border-radius: 10px; }
+
+#background-revue-j {
+  background: #95CAED;
+  background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
+  border-radius: 10px; }
+
+#background-revue-c {
+  background: #FE9952;
+  background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-m {
+  background: #CBC6CC;
+  background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-t {
+  background: #61BF99;
+  background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
+  border-radius: 10px; }
+
+#background-revue-f {
+  background: #8C67AA;
+  background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
+  border-radius: 10px; }
+
+#background-revue-a {
+  background: #E08696;
+  background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
+  border-radius: 10px; }
 
 /*-----@Media queries para full responsive@-----*/
 @media screen and (max-width: 768px) {
   /*Sección de la pagina de inicio*/
   #contenedorindex {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 2fr auto auto;
+    grid-template-rows: auto 1fr auto auto;
     grid-template-areas: "header" "main" "iframe" "footer"; }
   #logorevue {
+    grid-area: header;
     width: 130px;
     margin: 25px auto; }
   #revueimg #videotrailer {
@@ -447,6 +546,7 @@ body {
       height: 100px;
       margin: 20px auto; } }
 
+/*--$Mixin de animación$--*/
 /*@----Diseño pie de página----@*/
 footer {
   background: #959595;
@@ -467,124 +567,23 @@ footer {
     color: #ffffff;
     font-size: small; }
 
+/*Configuración inicial, fonts family y el fondo de la página en general*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/*Configuración inicial con los fonts family y el fondo de la página*/
 h1 {
-  color: #000000;
   background-color: #ffffff;
-  font-family: 'Asap', sans-serif;
-  font-size: 2.0em;
-  margin: 5px;
-  padding: 5px; }
+  font-family: bold 25px "Asap" sans-serif;
+  color: #353535;
+  padding: 10px; }
 
-h2 {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: normal;
-  color: black; }
+h2 h3 h4 h5 h6 {
+  font-family: normal 15px "Merriweather Sans" serif;
+  color: #353535;
+  padding: 10px;
+  margin: 5px auto; }
 
-h3 {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-weight: normal;
-  color: black; }
-
-h4 h5 h6 {
-  font-family: 'Merriweather', serif;
-  font-weight: lighter;
-  color: black; }
-
-/*@------Estilo navegación página index------@*/
-#contenedorindex {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "iframe iframe" "footer footer"; }
-
-/*------@Diseño página para la historia@------*/
-#contenedorhistoria {
-  display: grid;
-  grid-gap: 35px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 2fr auto;
-  grid-template-areas: "header header" "main main" "footer footer"; }
-
-/*-----@Diseño página de personajes@------*/
-#contenedorpersonajes {
-  display: grid;
-  grid-gap: 35px;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto 2px auto auto;
-  grid-template-areas: "header header" "div div" "main main" "footer footer"; }
-
-/*-----@Diseño página de anime@------*/
-#contenedoranime {
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
-
-/*-----@Diseño página sobre el juego@------*/
-#contenedorjuego {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 0.5fr 1fr auto;
-  grid-template-areas: "header header" "main main" "section section" "footer footer"; }
-
-/*-----@Diseño pagina de contacto@------*/
-#contenedorcontacto {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: "header header" "main aside" "footer footer"; }
-
-/*---Colores de fondo para los personajes---*/
-#background-revue-k {
-  background: #FB5458;
-  background: linear-gradient(47deg, #FB5458 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-h {
-  background: #6292E9;
-  background: linear-gradient(47deg, #6292E9 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-n {
-  background: #FDD162;
-  background: linear-gradient(35deg, #ffffffd8 35%, #FDD162 65%);
-  border-radius: 10px; }
-
-#background-revue-j {
-  background: #95CAED;
-  background: linear-gradient(47deg, #ffffffd8 35%, #95CAED 65%);
-  border-radius: 10px; }
-
-#background-revue-c {
-  background: #FE9952;
-  background: linear-gradient(47deg, #FE9952 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-m {
-  background: #CBC6CC;
-  background: linear-gradient(47deg, #CBC6CC 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-t {
-  background: #61BF99;
-  background: linear-gradient(47deg, #61BF99 50%, #ffffffd8 75%);
-  border-radius: 10px; }
-
-#background-revue-f {
-  background: #8C67AA;
-  background: linear-gradient(47deg, #ffffffd8 35%, #8C67AA 65%);
-  border-radius: 10px; }
-
-#background-revue-a {
-  background: #E08696;
-  background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
-  border-radius: 10px; }
+p {
+  font-family: normal 10px "Merriweather Sans" sans-serif; }

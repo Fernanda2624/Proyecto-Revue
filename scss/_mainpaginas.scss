@@ -1,28 +1,17 @@
-/*!-----Main página de index------!*/
+ @import "mixin";
+/*!------Main página de index------!*/
 .mainindex{
     grid-area: main;
     .infocentral{
         margin: 5px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        @include posicion(flex, column, center);
         #revueimg{
             border: none 5px;
             border-style:inset;
             width:85%;
             height:85%;
             margin: 20px auto;
-            animation-duration: 1.3s;
-            animation-name: imagenes;
-            animation-iteration-count:initial;
-            @keyframes imagenes{
-                0%{
-                    opacity: 0;
-                }
-                100%{
-                    opacity: 1;
-                }
-            }
+            @include animacion(1.3s);
         }
         article{
             padding: 5px;
@@ -41,65 +30,36 @@
 }
 /*!-----Main página de historia-----!*/
 .mainhistoria{
-    grid-area: main; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    grid-area: main;
+    @include posicion(flex, row, space-evenly);
     align-items:center;
     .imagenhistoria{
         width: 300px;
         border: #d3d0d0 0.5px dashed;
-        animation-duration: 1.0s;
-        animation-name: imagenes;
-        animation-iteration-count:initial;
-        @keyframes imagenes{
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
+        @include animacion(1.0s);
     }
     .historiarevue{
         display: flex;
         flex-direction: column;
         width:40%;
         background-color: white;
-        letter-spacing: 1px;
-        font-size: 0.9rem;
     }
     
 }
 /*!-----Main pagina de personajes-----!*/
 .iniciocv{
     grid-area: main;
-    display: flex;
-    flex-direction: column;
+    @include posicion(flex, column, center);
     margin: auto;
     width: 75%;
     padding: 5px;
-    animation-duration: 0.5s;
-    animation-name: info;
-    animation-iteration-count:initial;
-    @keyframes info{
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
-    }
+    @include animacion(0.5s);
     .cv-revue{
-        display: flex;
-        flex-direction: row;
+        @include posicion(flex, row, center);
         align-content: center;
         padding: 15px;
         align-items: center;
         justify-content: space-evenly;
-        .imgizq{
-            width: 25%;
-        }
         div{
             width: 35%;
             .imgder-cv{
@@ -108,10 +68,7 @@
                 border: solid 1px #0000009c; 
             }
             h1{
-                padding: 5px;
-                margin: 5px;
                 background-color: #ffffff00;
-                color: #353535;
                 font-size:xx-large;
             }
             p{
@@ -123,9 +80,7 @@
 /*!-----Main página de anime-----!*/
 .infoemision{
     grid-area: main;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @include posicion(flex, row, space-evenly);
     align-items: center;
     .textoemision{
         width: 30%;
@@ -145,18 +100,14 @@
     width: 70%;
     padding: 15px;
     margin: 10px auto;
-    margin: auto;
-    display: flex;
     justify-content: center;
     background-color: white;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 /*!----Main pagina de contacto-----!*/
 .formulariocont{
     grid-area: main;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include posicion(flex, row, center);
     .form-contenido{
         border-style: groove;
         padding: 25px;

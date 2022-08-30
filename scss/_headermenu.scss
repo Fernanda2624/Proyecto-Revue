@@ -1,3 +1,4 @@
+@import "mixin";
 /*!----Navegación barra principal----!*/
 .headermenu{
     grid-area: header;
@@ -5,17 +6,7 @@
     #logorevue{
         width:200px;
         margin: 25px auto;
-        animation-duration: 1.0s;
-        animation-name: logo;
-        animation-iteration-count:initial;
-        @keyframes logo{
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
+        @include animacion(1.0s);
     }
     nav{
         #opciones{
@@ -23,11 +14,9 @@
                 a{
                     text-decoration: none;
                     color: #e5072f;
-                    font-size:x-large;
+                    font-size:larger;
                     font-weight: bolder;
-                    animation-duration: 1.0s;
-                    animation-name: titulos;
-                    animation-iteration-count:initial;
+                    @include animacion(1.0s);
                         &:hover{
                             text-decoration:underline;
                             color: #525151; 
@@ -46,19 +35,9 @@
                 text-align: center;
                 border-top: #e507307c 1.5px solid;
                 border-bottom: #e507308f 1.8px inset;
-                animation-duration: 1.0s;
-                animation-name: titulos;
-                animation-iteration-count:initial;
+                @include animacion(1.0s);
                 li{
                     padding: 5px;
-                }
-                @keyframes titulos{
-                    0%{
-                        opacity: 0;
-                    }
-                    100%{
-                        opacity: 1;
-                    }
                 }
 
             }

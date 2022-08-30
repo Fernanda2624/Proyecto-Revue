@@ -1,0 +1,29 @@
+/*--$Mixin de animación$--*/
+@mixin animacion($tiempo){
+    animation-duration:$tiempo;
+    animation-name: imagenes;
+    animation-iteration-count:initial;
+    @keyframes imagenes{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+}
+@mixin posicion($display, $direction, $content){
+    display:$display;
+    flex-direction: $direction;
+    justify-content: $content;
+}
+@mixin colores1($color1) {
+    background: $color1;
+    background: linear-gradient(47deg, $color1 50%, #ffffffd8 75%);
+    border-radius: 10px;
+}
+@mixin colores2($color2) {
+    background: $color2;
+    background: linear-gradient(47deg, #ffffffd8 35%, $color2 65%);
+    border-radius: 10px;
+}

@@ -1,0 +1,69 @@
+/*@------Estilo navegación página index------@*/
+#contenedorindex{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "iframe iframe"
+    "footer footer";
+}
+/*------@Diseño página para la historia@------*/
+#contenedorhistoria{
+    display: grid;
+    grid-gap:35px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 2fr auto;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+}
+/*-----@Diseño página de personajes@------*/
+#contenedorpersonajes{
+    display: grid;
+    grid-gap:35px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 2px auto auto;
+    grid-template-areas:
+    "header header"
+    "div div"
+    "main main"
+    "footer footer";
+}
+/*-----@Diseño página de anime@------*/
+#contenedoranime{
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "footer footer";
+}
+/*-----@Diseño página sobre el juego@------*/
+#contenedorjuego{
+    display: grid;
+    grid-gap:10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 0.5fr 1fr auto;
+    grid-template-areas:
+    "header header"
+    "main main"
+    "section section"
+    "footer footer";
+}
+/*-----@Diseño pagina de contacto@------*/
+#contenedorcontacto{
+    display: grid;
+    grid-gap:20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
