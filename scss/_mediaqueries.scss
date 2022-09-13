@@ -8,39 +8,35 @@
         grid-template-areas:
         "header"
         "main"
-        "iframe"
         "footer";
     }
-    #logorevue{
-        grid-area: header;
-        width:130px;
-        margin: 25px auto;
-    }
-    #revueimg{
-        grid-area: main;
-        #videotrailer{
-            grid-area: iframe;
-            border: none 5px;
-            border-style:inset;
-            width: auto;
-            margin: 5px auto;
-            font-size: 0.8em;
-        }
-    } 
     .navbar-nav{
         margin: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content:space-around;
+        #logorevue{
+            grid-area: header;
+            width:130px;
+            margin: 25px auto;
+        }
+        #opciones{
+            li{
+                a{
+                    font-size: 1.0em;
+                }
+            }            
+        }
     }
-    #opciones{
-        li{
-            a{
-                font-size: 1.0em;
-            }
-        }            
+    .mainindex{
+        grid-area: main;
+        #videotrailer{
+            width: auto;
+            margin: 5px auto;
+        }
+    
     }
-
+    
     /*Sección de la pagina de historia*/
     #contenedorhistoria{
         grid-template-columns: 1fr;
@@ -76,7 +72,7 @@
         display: grid;
         grid-gap:35px;
         grid-template-columns: auto;
-        grid-template-rows: auto 115px auto auto;
+        grid-template-rows: auto 135px auto auto;
         grid-template-areas:
         "header"
         "div"
@@ -118,10 +114,8 @@
                     width: 0;
                 }
                 width: 80%;
-            }
-            
+            }   
         }
-        
     }
 
     /*Sección de pagina anime*/
@@ -177,14 +171,13 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }   
-    .juego1{
-        margin:auto;
-        iframe{
-            width: auto;
+        .juego1{
+            margin:auto;
+            iframe{
+                width: auto;
+            }
         }
-    }
-
+    }   
     /*Seccion de la pagina contacto*/
     #contenedorcontacto{
         display: grid;
@@ -200,13 +193,14 @@
     .formulariocont{ 
         display: flex;
         flex-direction: row-reverse;
+        margin: auto;
         .formcont{
             background-color: white;
         }
     }
-    
     .textocont{
-        grid-area: aside;
+        display: flex;
+        flex-direction: column-reverse;
         width: 45%;
         margin: 20px auto;
         align-items: center;
@@ -216,9 +210,8 @@
             font-size: 1.2em;
         }
         .imgkaren{
-            width:120px; 
-            height:120px;
-            margin:20px auto;
+            width:90%;
+            margin: auto;
         }
     }
     

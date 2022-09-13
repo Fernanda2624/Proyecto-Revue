@@ -141,8 +141,11 @@
 .formulariocont{
     grid-area: main;
     @include posicion(flex, row, center);
+    margin-left: 120px;    
+    width: 90%;
     .form-contenido{
         border-style: groove;
+        width: 100%;
         padding: 25px;
         background-color: white;
         .formcont{

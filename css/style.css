@@ -228,9 +228,12 @@ body {
   grid-area: main;
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  margin-left: 120px;
+  width: 90%; }
   .formulariocont .form-contenido {
     border-style: groove;
+    width: 100%;
     padding: 25px;
     background-color: white; }
     .formulariocont .form-contenido .formcont {
@@ -382,16 +385,14 @@ body {
 .textocont {
   grid-area: aside;
   width: 45%;
-  margin: 20px auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: white; }
   .textocont .imgkaren {
-    width: 170px;
-    height: 170px;
-    margin: 20px; }
+    width: 80%; }
 
 /*--$Mixin de animación$--*/
 /*---Colores de fondo para los personajes; páginas personajes---*/
@@ -447,27 +448,23 @@ body {
   #contenedorindex {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto auto;
-    grid-template-areas: "header" "main" "iframe" "footer"; }
-  #logorevue {
-    grid-area: header;
-    width: 130px;
-    margin: 25px auto; }
-  #revueimg {
-    grid-area: main; }
-    #revueimg #videotrailer {
-      grid-area: iframe;
-      border: none 5px;
-      border-style: inset;
-      width: auto;
-      margin: 5px auto;
-      font-size: 0.8em; }
+    grid-template-areas: "header" "main" "footer"; }
   .navbar-nav {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around; }
-  #opciones li a {
-    font-size: 1.0em; }
+    .navbar-nav #logorevue {
+      grid-area: header;
+      width: 130px;
+      margin: 25px auto; }
+    .navbar-nav #opciones li a {
+      font-size: 1.0em; }
+  .mainindex {
+    grid-area: main; }
+    .mainindex #videotrailer {
+      width: auto;
+      margin: 5px auto; }
   /*Sección de la pagina de historia*/
   #contenedorhistoria {
     grid-template-columns: 1fr;
@@ -492,7 +489,7 @@ body {
     display: grid;
     grid-gap: 35px;
     grid-template-columns: auto;
-    grid-template-rows: auto 115px auto auto;
+    grid-template-rows: auto 135px auto auto;
     grid-template-areas: "header" "div" "main" "footer";
     align-content: center; }
   .headermenu {
@@ -561,10 +558,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  .juego1 {
-    margin: auto; }
-    .juego1 iframe {
-      width: auto; }
+    .secdescarga .juego1 {
+      margin: auto; }
+      .secdescarga .juego1 iframe {
+        width: auto; }
   /*Seccion de la pagina contacto*/
   #contenedorcontacto {
     display: grid;
@@ -574,11 +571,13 @@ body {
     grid-template-areas: "header" "aside" "main" "footer"; }
   .formulariocont {
     display: flex;
-    flex-direction: row-reverse; }
+    flex-direction: row-reverse;
+    margin: auto; }
     .formulariocont .formcont {
       background-color: white; }
   .textocont {
-    grid-area: aside;
+    display: flex;
+    flex-direction: column-reverse;
     width: 45%;
     margin: 20px auto;
     align-items: center;
@@ -587,9 +586,8 @@ body {
     .textocont p {
       font-size: 1.2em; }
     .textocont .imgkaren {
-      width: 120px;
-      height: 120px;
-      margin: 20px auto; } }
+      width: 90%;
+      margin: auto; } }
 
 /*--$Mixin de animación$--*/
 /*@----Diseño pie de página----@*/
