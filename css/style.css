@@ -81,7 +81,7 @@ body {
         display: flex;
         padding: 0;
         width: 400%;
-        animation: cambiar 40s infinite alternate ease-in-out; }
+        animation: cambiar 30s infinite alternate ease-in-out; }
         .mainindex .infocentral .slide ul li {
           list-style: none;
           width: 100%;
