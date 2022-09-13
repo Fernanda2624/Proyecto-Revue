@@ -5,18 +5,50 @@
     .infocentral{
         margin: 5px;
         @include posicion(flex, column, center);
-        #revueimg{
-            border: none 5px;
-            border-style:inset;
-            width:85%;
-            height:85%;
-            margin: 20px auto;
-            @include animacion(1.3s);
+        .slide{
+            margin: auto;
+            width: 90%;
+            overflow: hidden;
+            ul{
+                display: flex;
+                padding: 0;
+                width: 400%;
+                animation: cambiar 40s infinite alternate ease-in-out;
+                
+                li{
+                    list-style: none;
+                    width: 100%;
+                    padding: 0;
+                    #revueimg{
+                        border: none 5px;
+                        border-style:inset;
+                        width: 90%;
+                        height: 90%;
+                        margin: auto;
+                        @include animacion(1.3s);
+                    }
+                }
+                @keyframes cambiar {
+                    0%{margin-left: 0;}
+                    20%{margin-left: 0;}
+                    
+                    25%{margin-left: -100%;}
+                    45%{margin-left: -100%;}
+
+                    50%{margin-left: -200%;}
+                    70%{margin-left: -200%;}
+
+                    75%{margin-left: -300%;}
+                    100%{margin-left: -300%;}
+                }
+            }
+            
         }
+        
         article{
-            padding: 5px;
             width:90%;
             margin:auto;
+            margin-top: -5%;
             background-color: white;
         }
     }
@@ -34,17 +66,18 @@
     @include posicion(flex, row, space-evenly);
     align-items:center;
     .imagenhistoria{
-        width: 300px;
+        width: 30%;
+        margin: auto;
         border: #d3d0d0 0.5px dashed;
         @include animacion(1.0s);
-    }
+    } 
     .historiarevue{
         display: flex;
         flex-direction: column;
-        width:40%;
+        margin: auto;
+        width:35%;
         background-color: white;
-    }
-    
+    }   
 }
 /*!-----Main pagina de personajes-----!*/
 .iniciocv{
@@ -63,7 +96,7 @@
         div{
             width: 35%;
             .imgder-cv{
-                width: 45%;
+                width:50%;
                 margin: 10px;
                 border: solid 1px #0000009c; 
             }

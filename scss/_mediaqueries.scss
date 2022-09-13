@@ -1,3 +1,4 @@
+@import "mixin";
 /*-----@Media queries para full responsive@-----*/
 @media screen and (max-width: 768px) {
     /*Sección de la pagina de inicio*/
@@ -16,11 +17,13 @@
         margin: 25px auto;
     }
     #revueimg{
+        grid-area: main;
         #videotrailer{
+            grid-area: iframe;
             border: none 5px;
             border-style:inset;
-            width: 350px;
-            height: 230px;
+            width: 250px;
+            height: 130px;
             margin: 5px auto;
             font-size: 0.8em;
         }
@@ -50,74 +53,75 @@
         "footer";
     }
     .mainhistoria{
+        grid-area: main;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
-    
+    .imagenhistoria{
+        width: 250px;
+        border: #d3d0d0 0.5px dashed;
+    }
     .historiarevue{
+        grid-area: main;
         width:60%;
         background-color: white;
         letter-spacing: 1px;
         font-size: 0.8rem;
     }
     
-    .imagenhistoria{
-        width: 250px;
-        border: #d3d0d0 0.5px dashed;
-    }
-
     /*Sección de pagina personajes*/
     #contenedorpersonajes{
         display: grid;
         grid-gap:35px;
         grid-template-columns: auto;
-        grid-template-rows: auto 2px auto auto;
+        grid-template-rows: auto 115px auto auto;
         grid-template-areas:
         "header"
-        "div"
         "div"
         "main"
         "footer";
         align-content: center;
     }
-    .cont-personajes .iniciocv{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
+    .headermenu{
+        grid-area: header;
+    }
+    .cont-personajes{
+        grid-area: div;
+        .navbar-nav-cv{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                padding: 10px;
+                margin: 5px auto;
+                a{
+                    font-size:small;
+                }
+            }
+    
+        }
     }
     .iniciocv{
+        grid-area: main;
         margin: auto;
         justify-content: center;
         align-items: center;
-    }
-    .navbar-nav-cv{
-        display: flex;
-        flex-wrap: wrap;
-        li{
-            padding: 10px;
-            margin: 5px auto;
-            a{
-                font-size:small;
+        .cv-revue{
+            @include posicion (flex, column, center);
+            .imgizq{
+                width: 60%;
             }
+            div{
+                .imgder-cv{
+                    opacity: 0;
+                    width: 0;
+                }
+                width: 80%;
+            }
+            
         }
-
-    }
-    .cv-revue{
-        display: flex;
-        flex-direction:row;
-        .imgizq{
-            width: 45%;
-        }
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            margin: auto;
-        }
+        
     }
 
     /*Sección de pagina anime*/
@@ -136,9 +140,10 @@
         margin: auto;
         flex-direction: column-reverse;
         align-items: center;
-    }
-    .textoemision{
-        width: 80%;
+        .textoemision{
+            width: 80%;
+            margin: auto;
+        }
     }
     
     .emitidos{
@@ -174,7 +179,9 @@
     }   
     .juego1{
         margin:auto;
-        width: auto;
+        iframe{
+            width: auto;
+        }
     }
 
     /*Seccion de la pagina contacto*/
@@ -182,33 +189,36 @@
         display: grid;
         grid-gap:5px;
         grid-template-columns: auto;
-        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-rows: auto auto auto auto;
         grid-template-areas:
         "header"
         "aside"
         "main"
         "footer";
-        .formulariocont{ 
-            display: flex;
-            flex-direction: row-reverse;
-        }
+    }
+    .formulariocont{ 
+        display: flex;
+        flex-direction: row-reverse;
         .formcont{
             background-color: white;
         }
-        .textocont{
-            width: 45%;
-            margin: 20px auto;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-            p{
-                font-size: 1.0em;
-            }
+    }
+    
+    .textocont{
+        grid-area: aside;
+        width: 45%;
+        margin: 20px auto;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        p{
+            font-size: 1.2em;
         }
         .imgkaren{
-            width:100px; 
-            height:100px;
+            width:120px; 
+            height:120px;
             margin:20px auto;
         }
-    }   
+    }
+    
 }

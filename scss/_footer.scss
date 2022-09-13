@@ -2,7 +2,7 @@
 footer{
     background: #959595;
     background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
-    padding: 5px;
+    padding: 1px;
     width: 90%;
     margin: auto;
     grid-area: footer;
@@ -12,10 +12,9 @@ footer{
         justify-content: center;
         align-content: center;
         flex-wrap: wrap;
-        padding: 5px;
     }
     h6{
-        padding: 5px;
+        padding: 1px;
         color: #ffffff;
         font-size:small;
     }

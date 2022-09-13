@@ -73,25 +73,56 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-    .mainindex .infocentral #revueimg {
-      border: none 5px;
-      border-style: inset;
-      width: 85%;
-      height: 85%;
-      margin: 20px auto;
-      animation-duration: 1.3s;
-      animation-name: imagenes;
-      animation-iteration-count: initial; }
+    .mainindex .infocentral .slide {
+      margin: auto;
+      width: 90%;
+      overflow: hidden; }
+      .mainindex .infocentral .slide ul {
+        display: flex;
+        padding: 0;
+        width: 400%;
+        animation: cambiar 40s infinite alternate ease-in-out; }
+        .mainindex .infocentral .slide ul li {
+          list-style: none;
+          width: 100%;
+          padding: 0; }
+          .mainindex .infocentral .slide ul li #revueimg {
+            border: none 5px;
+            border-style: inset;
+            width: 90%;
+            height: 90%;
+            margin: auto;
+            animation-duration: 1.3s;
+            animation-name: imagenes;
+            animation-iteration-count: initial; }
 
 @keyframes imagenes {
   0% {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes cambiar {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100%; }
+  45% {
+    margin-left: -100%; }
+  50% {
+    margin-left: -200%; }
+  70% {
+    margin-left: -200%; }
+  75% {
+    margin-left: -300%; }
+  100% {
+    margin-left: -300%; } }
     .mainindex .infocentral article {
-      padding: 5px;
       width: 90%;
       margin: auto;
+      margin-top: -5%;
       background-color: white; }
   .mainindex #videotrailer {
     grid-area: iframe;
@@ -108,7 +139,8 @@ body {
   justify-content: space-evenly;
   align-items: center; }
   .mainhistoria .imagenhistoria {
-    width: 300px;
+    width: 30%;
+    margin: auto;
     border: #d3d0d0 0.5px dashed;
     animation-duration: 1s;
     animation-name: imagenes;
@@ -122,7 +154,8 @@ body {
   .mainhistoria .historiarevue {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    margin: auto;
+    width: 35%;
     background-color: white; }
 
 /*!-----Main pagina de personajes-----!*/
@@ -154,7 +187,7 @@ body {
     .iniciocv .cv-revue div {
       width: 35%; }
       .iniciocv .cv-revue div .imgder-cv {
-        width: 45%;
+        width: 50%;
         margin: 10px;
         border: solid 1px #0000009c; }
       .iniciocv .cv-revue div h1 {
@@ -403,6 +436,7 @@ body {
   background: linear-gradient(47deg, #ffffffd8 35%, #E08696 65%);
   border-radius: 10px; }
 
+/*--$Mixin de animación$--*/
 /*-----@Media queries para full responsive@-----*/
 @media screen and (max-width: 768px) {
   /*Sección de la pagina de inicio*/
@@ -414,13 +448,16 @@ body {
     grid-area: header;
     width: 130px;
     margin: 25px auto; }
-  #revueimg #videotrailer {
-    border: none 5px;
-    border-style: inset;
-    width: 350px;
-    height: 230px;
-    margin: 5px auto;
-    font-size: 0.8em; }
+  #revueimg {
+    grid-area: main; }
+    #revueimg #videotrailer {
+      grid-area: iframe;
+      border: none 5px;
+      border-style: inset;
+      width: 250px;
+      height: 130px;
+      margin: 5px auto;
+      font-size: 0.8em; }
   .navbar-nav {
     margin: auto;
     display: flex;
@@ -434,54 +471,56 @@ body {
     grid-template-rows: auto 1fr 1fr auto;
     grid-template-areas: "header" "main" "main" "footer"; }
   .mainhistoria {
+    grid-area: main;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center; }
+  .imagenhistoria {
+    width: 250px;
+    border: #d3d0d0 0.5px dashed; }
   .historiarevue {
+    grid-area: main;
     width: 60%;
     background-color: white;
     letter-spacing: 1px;
     font-size: 0.8rem; }
-  .imagenhistoria {
-    width: 250px;
-    border: #d3d0d0 0.5px dashed; }
   /*Sección de pagina personajes*/
   #contenedorpersonajes {
     display: grid;
     grid-gap: 35px;
     grid-template-columns: auto;
-    grid-template-rows: auto 2px auto auto;
-    grid-template-areas: "header" "div" "div" "main" "footer";
+    grid-template-rows: auto 115px auto auto;
+    grid-template-areas: "header" "div" "main" "footer";
     align-content: center; }
-  .cont-personajes .iniciocv {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; }
+  .headermenu {
+    grid-area: header; }
+  .cont-personajes {
+    grid-area: div; }
+    .cont-personajes .navbar-nav-cv {
+      display: flex;
+      flex-wrap: wrap; }
+      .cont-personajes .navbar-nav-cv li {
+        padding: 10px;
+        margin: 5px auto; }
+        .cont-personajes .navbar-nav-cv li a {
+          font-size: small; }
   .iniciocv {
+    grid-area: main;
     margin: auto;
     justify-content: center;
     align-items: center; }
-  .navbar-nav-cv {
-    display: flex;
-    flex-wrap: wrap; }
-    .navbar-nav-cv li {
-      padding: 10px;
-      margin: 5px auto; }
-      .navbar-nav-cv li a {
-        font-size: small; }
-  .cv-revue {
-    display: flex;
-    flex-direction: row; }
-    .cv-revue .imgizq {
-      width: 45%; }
-    .cv-revue div {
+    .iniciocv .cv-revue {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      margin: auto; }
+      justify-content: center; }
+      .iniciocv .cv-revue .imgizq {
+        width: 60%; }
+      .iniciocv .cv-revue div {
+        width: 80%; }
+        .iniciocv .cv-revue div .imgder-cv {
+          opacity: 0;
+          width: 0; }
   /*Sección de pagina anime*/
   #contenedoranime {
     display: grid;
@@ -493,8 +532,9 @@ body {
     margin: auto;
     flex-direction: column-reverse;
     align-items: center; }
-  .textoemision {
-    width: 80%; }
+    .infoemision .textoemision {
+      width: 80%;
+      margin: auto; }
   .emitidos {
     grid-area: section;
     justify-content: center;
@@ -519,31 +559,33 @@ body {
     flex-direction: column;
     justify-content: center; }
   .juego1 {
-    margin: auto;
-    width: auto; }
+    margin: auto; }
+    .juego1 iframe {
+      width: auto; }
   /*Seccion de la pagina contacto*/
   #contenedorcontacto {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: auto;
-    grid-template-rows: auto 1fr 1fr auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: "header" "aside" "main" "footer"; }
-    #contenedorcontacto .formulariocont {
-      display: flex;
-      flex-direction: row-reverse; }
-    #contenedorcontacto .formcont {
+  .formulariocont {
+    display: flex;
+    flex-direction: row-reverse; }
+    .formulariocont .formcont {
       background-color: white; }
-    #contenedorcontacto .textocont {
-      width: 45%;
-      margin: 20px auto;
-      align-items: center;
-      justify-content: center;
-      background-color: white; }
-      #contenedorcontacto .textocont p {
-        font-size: 1.0em; }
-    #contenedorcontacto .imgkaren {
-      width: 100px;
-      height: 100px;
+  .textocont {
+    grid-area: aside;
+    width: 45%;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: white; }
+    .textocont p {
+      font-size: 1.2em; }
+    .textocont .imgkaren {
+      width: 120px;
+      height: 120px;
       margin: 20px auto; } }
 
 /*--$Mixin de animación$--*/
@@ -551,7 +593,7 @@ body {
 footer {
   background: #959595;
   background: linear-gradient(0deg, #525151 0%, #b8b8b8 52%, #fcf1f1fe 100%);
-  padding: 5px;
+  padding: 1px;
   width: 90%;
   margin: auto;
   grid-area: footer; }
@@ -560,10 +602,9 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    flex-wrap: wrap;
-    padding: 5px; }
+    flex-wrap: wrap; }
   footer h6 {
-    padding: 5px;
+    padding: 1px;
     color: #ffffff;
     font-size: small; }
 
@@ -577,7 +618,7 @@ h1 {
   background-color: #ffffff;
   font-family: bold 25px "Asap" sans-serif;
   color: #353535;
-  padding: 10px; }
+  padding: 5px; }
 
 h2 h3 h4 h5 h6 {
   font-family: normal 15px "Merriweather Sans" serif;
