@@ -145,11 +145,12 @@
         }
     }
     
-    .emitidos{
+    #emitidos{
         grid-area: section;
         justify-content: center;
         width: 60%;
         margin: auto;
+        font-size: small;
     }
     /*Sección de pagina juego*/
     #contenedorjuego{

@@ -296,7 +296,11 @@ body {
     margin: 5px auto; }
   #emitidos #tablacap {
     width: auto;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
 
 /*!-Seccion de descarga pagina juegos-!*/
 .secdescarga {
@@ -534,11 +538,12 @@ body {
     .infoemision .textoemision {
       width: 80%;
       margin: auto; }
-  .emitidos {
+  #emitidos {
     grid-area: section;
     justify-content: center;
     width: 60%;
-    margin: auto; }
+    margin: auto;
+    font-size: small; }
   /*Sección de pagina juego*/
   #contenedorjuego {
     display: grid;
