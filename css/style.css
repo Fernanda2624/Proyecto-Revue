@@ -541,9 +541,9 @@ body {
   #emitidos {
     grid-area: section;
     justify-content: center;
-    width: 60%;
+    width: 70%;
     margin: auto;
-    font-size: small; }
+    font-size: smaller; }
   /*Sección de pagina juego*/
   #contenedorjuego {
     display: grid;
