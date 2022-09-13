@@ -296,7 +296,7 @@ body {
   padding: 10px; }
   #emitidos h2 {
     font-size: x-large;
-    margin: 5px auto; }
+    margin: 20px auto; }
   #emitidos #tablacap {
     width: auto;
     margin-bottom: 50px;
@@ -529,11 +529,13 @@ body {
   .infoemision {
     display: flex;
     margin: auto;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center; }
     .infoemision .textoemision {
       width: 80%;
       margin: auto; }
+    .infoemision .imgemision {
+      padding: 10px; }
   #emitidos {
     grid-area: section;
     justify-content: center;
